@@ -9,6 +9,7 @@ export default class Tab {
   }
   display() {
     // static part
+    document.querySelector('html').style.height = 'fit-content';
     const tab = document.createElement("div");
     tab.setAttribute('id','tab');
     tab.style.zIndex = "1";
