@@ -6,7 +6,7 @@ html{
   position: relative;
 }
 
-/* background */
+/* background and global rules */
 body{  
   height: 100%;
   background-image: url(./pictures/bg.jpg);
@@ -36,7 +36,7 @@ body::after{
   background-color: rgba(0, 0, 0, 0.363);
 }
 
-/* positioning */
+/* positioning of main */
 main{
   position: relative;
   z-index: 1;
@@ -99,6 +99,7 @@ a:hover{
   color: rgb(125, 160, 214);
   border-bottom:1px dotted rgb(125, 160, 214);
 }
+
  /* navigation section */
 nav{
   width: 100%;
@@ -119,21 +120,29 @@ nav > div:last-child{
   border-bottom-left-radius: 0.5rem;
 }
 
+
+/* desktop section */
 @media (min-width: 992px){
+  main{
+    padding-top: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+  }
+
+  /* logo part */
   #logo{
     padding: 2.5rem;
   }
   img{
     height: 4.5rem;
   }
-  main{
-    padding-top: 0;
-    font-size: 1.5rem;
-    letter-spacing: 0.4rem;
-  }
+
+   /* middle vertical line  */
   .middleLine> div:first-child{
     height: 4rem;
   }
+
+  /* hero part */
   .hero{
     width: 98%;
     height: 15rem;
@@ -145,6 +154,8 @@ nav > div:last-child{
   .hero > p {
     text-align: center;
   }
+
+  /* navigation part */
   nav{
     display: flex;
     justify-content: center;
