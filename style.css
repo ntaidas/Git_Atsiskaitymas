@@ -1,4 +1,5 @@
 @import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 html{
   height: 100%;
@@ -20,8 +21,10 @@ body{
   color: white;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
   line-height: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 
 }
 body::after{
@@ -36,7 +39,7 @@ body::after{
 
 /* positioning */
 main{
-  padding-top: 8%;
+  padding-top: 15%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,6 +63,7 @@ main{
   border-bottom: 1px solid white;
   height: 10rem;
 }
+
 /* gem logo */
 #logo{
   border-radius: 50%;
@@ -72,16 +76,30 @@ img{
 
 /* hero section */
 .hero{
-display: flex;
-flex-direction: column;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
-
+.hero>h1{
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+}
 .hero > p{
   text-align: start;
   padding-top: 0.5rem;
+  line-height: 2rem;
 }
-
+a{
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
+}
+a:hover{
+  color: rgb(125, 160, 214);
+  border-bottom:1px dotted rgb(125, 160, 214);
+}
  /* navigation section */
 nav{
   width: 100%;
@@ -89,6 +107,11 @@ nav{
 nav > div{
  width: 100%;
 }
-a{
-  color: white;
+nav > div:first-child{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+nav > div:last-child{
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
