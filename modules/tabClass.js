@@ -8,8 +8,9 @@ export default class Tab {
     return this.display();
   }
   display() {
+    // static part
     const tab = document.createElement("div");
-    tab.classList.add("tab");
+    tab.setAttribute('id','tab');
     tab.style.zIndex = "1";
     const closeButton = document.createElement("button");
     const closeImg = document.createElement("img");
@@ -17,7 +18,7 @@ export default class Tab {
     closeButton.append(closeImg);
     document.querySelector("body").append(tab);
     closeButton.addEventListener("click", () => closeTab(tab));
-    
+    // part used to create content for tab from data file
     const header = document.createElement('h1');
     const headerTxt = document.createTextNode(this.header);
     header.appendChild(headerTxt);
@@ -26,13 +27,11 @@ export default class Tab {
     coverImg.setAttribute('alt',this.header);
     tab.append(closeButton,header,coverImg);
     this.paragraphs.forEach(paragraph => {
-        console.dir(paragraph)
         const p = document.createElement('p');
         const pTxt = document.createTextNode(paragraph);
-        p.append(pTxt)
-        tab.append(p)
+        p.append(pTxt);
+        tab.append(p);
     })
-    
     return tab
   }
 }
