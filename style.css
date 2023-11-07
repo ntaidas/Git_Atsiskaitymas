@@ -4,6 +4,7 @@
 html {
   height: 100%;
   position: relative;
+  /* transition: 200ms linear; */
 }
 
 /* background and global rules */
@@ -44,6 +45,7 @@ main {
   align-items: center;
   width: 96%;
   padding-top: 15%;
+  transition: 500ms;
 }
 
 /* borders */
@@ -133,6 +135,7 @@ nav > div:last-child {
   padding: 5% 8%;
   margin: 2rem 5%;
   gap: 1rem;
+  transition: 600ms;
 }
 #tab > button {
   position: absolute;
@@ -235,4 +238,9 @@ nav > div:last-child {
   #tab > img,video {
     object-position: center;
   }
+}
+
+/* transition ENGINE */
+.hide{
+  scale: 0;
 }
