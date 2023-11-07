@@ -17,9 +17,11 @@ export default class Tab {
     const closeButton = document.createElement("button");
     const closeImg = document.createElement("img");
     closeImg.setAttribute("src", "../pictures/xmark-solid.svg");
+    closeImg.setAttribute("alt", "X");
     closeButton.append(closeImg);
     document.querySelector("body").append(tab);
     closeButton.addEventListener("click", () => closeTab(tab));
+    
     // part used to create content for tab from data file
     const header = document.createElement("h1");
     const headerTxt = document.createTextNode(this.header);
@@ -30,16 +32,16 @@ export default class Tab {
       coverImg.setAttribute("alt", this.header);
       tab.append(closeButton, header, coverImg);
     }
-    if(this.video){
-      const coverVideo = document.createElement('video');
-      coverVideo.setAttribute('autoplay','');
-      coverVideo.setAttribute('loop','');
-      const videoSrc = document.createElement('source');
-      videoSrc.setAttribute('src', this.video);
-      coverVideo.appendChild(videoSrc)
+    if (this.video) {
+      const coverVideo = document.createElement("video");
+      coverVideo.setAttribute("autoplay", "");
+      coverVideo.setAttribute("loop", "");
+      const videoSrc = document.createElement("source");
+      videoSrc.setAttribute("src", this.video);
+      const videAlt = document.createTextNode("Video of people having fun");
+      coverVideo.appendChild(videoSrc);
       tab.append(closeButton, header, coverVideo);
     }
-    
     this.paragraphs.forEach((paragraph) => {
       const p = document.createElement("p");
       const pTxt = document.createTextNode(paragraph);
