@@ -16,7 +16,7 @@ export default class Tab {
     tab.style.zIndex = "1";
     const closeButton = document.createElement("button");
     const closeImg = document.createElement("img");
-    closeImg.setAttribute("src", "../pictures/xmark-solid.svg");
+    closeImg.setAttribute("src", "./pictures/xmark-solid.svg");
     closeImg.setAttribute("alt", "X");
     closeButton.append(closeImg);
     document.querySelector("body").append(tab);
