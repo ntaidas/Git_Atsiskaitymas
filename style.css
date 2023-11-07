@@ -94,6 +94,7 @@ a {
   color: white;
   text-decoration: none;
   border-bottom: 1px dotted white;
+  transition: 300ms;
 }
 a:hover {
   color: rgb(125, 160, 214);
@@ -106,6 +107,7 @@ nav {
 }
 nav > div {
   width: 100%;
+  transition: 500ms;
 }
 nav > div:hover {
   background-color: rgba(255, 255, 255, 0.205);
@@ -131,7 +133,6 @@ nav > div:last-child {
   padding: 5% 8%;
   margin: 2rem 5%;
   gap: 1rem;
-  transition: 1s;
 }
 #tab > button {
   position: absolute;
@@ -156,7 +157,7 @@ nav > div:last-child {
   border-bottom: 1px solid white;
   line-height: 5rem;
 }
-#tab > img {
+#tab > img,video {
   width: 100%;
   height: 60%;
   object-fit: cover;
@@ -173,7 +174,7 @@ nav > div:last-child {
 }
 
 /* desktop section */
-@media (min-width: 992px) {
+@media (min-width: 900px) {
   main {
     padding-top: 0;
     font-size: 2rem;
@@ -192,7 +193,6 @@ nav > div:last-child {
   .middleLine > div:first-child {
     height: 4rem;
   }
-
   /* hero part */
   .hero {
     width: 98%;
@@ -204,6 +204,7 @@ nav > div:last-child {
   }
   .hero > p {
     text-align: center;
+    line-height: 3rem;
   }
 
   /* navigation part */
@@ -231,10 +232,7 @@ nav > div:last-child {
     max-width: 1000px;
     gap: 2rem;
   }
-  #tab > img {
+  #tab > img,video {
     object-position: center;
   }
-}
-@media {
-  
 }
