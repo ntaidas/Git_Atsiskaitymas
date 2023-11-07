@@ -131,6 +131,7 @@ nav > div:last-child {
   padding: 5% 8%;
   margin: 2rem 5%;
   gap: 1rem;
+  transition: 1s;
 }
 #tab > button {
   position: absolute;
@@ -138,6 +139,11 @@ nav > div:last-child {
   right: 1%;
   top: 1%;
   border: none;
+  transition: 500ms;
+}
+#tab > button:hover{
+  rotate: 90deg;
+  cursor: pointer;
 }
 #tab > button > img{
   height: 3rem;
@@ -170,7 +176,7 @@ nav > div:last-child {
 @media (min-width: 992px) {
   main {
     padding-top: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 0.4rem;
   }
 
@@ -219,4 +225,16 @@ nav > div:last-child {
     border-top-right-radius: 0.5rem;
     border-bottom-left-radius: 0rem;
   }
+  #tab{
+    margin: 30px 10%;
+    padding: 1% 4%;
+    max-width: 1000px;
+    gap: 2rem;
+  }
+  #tab > img {
+    object-position: center;
+  }
+}
+@media {
+  
 }
